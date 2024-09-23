@@ -1,3 +1,29 @@
+const stream = await env.AI.run("@cf/meta/llama-3.1-8b-instruct-fp8", {
+  stream: true,
+  max_tokens: 512,
+  messages: [
+    { role: "system", content: "You are a an AI assistant"},
+    { role: "user", content: "Hi"},
+    { role: "assistant", content: "How can I help you today?"},
+    { role: "user", content: "What is your model?"},
+    { role: "assistant", content: "I am an NLP-based conversational AI model, specifically a type of Transformer model. My architecture is based on the BERT (Bidirectional Encoder Representations from Transformers) framework, which is a popular and well-established approach for natural language processing tasks.
+
+More specifically, I'm a variant of the BERT model, fine-tuned for conversational dialogues and response generation. My knowledge base is trained on a massive corpus of text data, which allows me to understand and respond to a wide range of topics and questions.
+
+My capabilities include:
+
+* Language understanding
+* Entity recognition
+* Sentiment analysis
+* Response generation
+* Dialogue management
+* Contextual understanding
+
+I'm constantly learning and improving my performance, so please bear with me if I make any mistakes!
+
+What can I assist you with today?"},
+    { role: "user", content: "Is this right?
+
 #:schema node_modules/wrangler/config-schema.json
 name = "hello-ai"
 main = "src/entry.py"
